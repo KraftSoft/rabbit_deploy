@@ -1,0 +1,10 @@
+pkg-config (0.21-1) unstable; urgency=low
+
+  * New upstream release
+    - Adds internal pkg-config package.  (closes: #254289)
+    - Supports escaping $ rather than %.  (closes: #378570)
+    - Always adds all cflags.  (closes: #340904)
+  * Includes full NEWS file.  (closes: #334896)
+  * Remove libglib2.0-dev build-deps.  (closes: #350176)
+
+ -- Tollef Fog Heen <kravcov2512@gmail.com>  Wed, 5 Feb 2006 21:11:21 +0200

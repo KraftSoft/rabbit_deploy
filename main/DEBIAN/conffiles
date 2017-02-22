@@ -1,0 +1,4 @@
+/etc/nginx/conf.d/letsgo.conf
+/etc/nginx/conf.d/upstreams.conf
+
+/etc/uwsgi/letsgo.yaml

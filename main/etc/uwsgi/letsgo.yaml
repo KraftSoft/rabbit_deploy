@@ -1,0 +1,15 @@
+uwsgi:
+    socket: 127.0.0.1:8082
+    pythonpath: /var/www/letsgo
+    module: application.wsgi
+    env: DJANGO_SETTINGS_MODULE=application.settings.prod
+    venv: /var/www/letsgo/env
+    daemonize: /var/log/uwsgi.log
+    max-requests: 5000
+    plugins: python34
+    buffer-size: 32768
+    harakiri: 30
+    reload-mercy: 8
+    master: 1
+    no-orphans: 1
+    touch-reload: /etc/uwsgi/letsgo.yaml

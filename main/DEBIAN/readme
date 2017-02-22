@@ -1,0 +1,17 @@
+Что нужно сделать на проде:
+
+0. Убедиться, что пользователь w3data существует
+1. Создать роль w3data в postgresql
+1. Создать папку /var/www/letsgo в ней будут симлинки на одну из версий
+2. Установить переменную окрудения PYTHONPATH=/var/www/letsgo/env
+
+su w3data -c "export PYTHONPATH=/var/www/letsgo/env/"
+su w3data -c "export PATH=${PYTHONPATH}:${PATH}"
+
+
+После выкатки:
+1. Поменять симлинк на /var/www/letsgo на новый пакет
+
+
+Полезные команды:
+1. sudo ln -sfnd /usr/share/letsgo-1.0-3/* /var/www/letsgo # поменять текущую версию
