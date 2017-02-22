@@ -1,13 +1,13 @@
 
 PROJECT=$1
 
-if [[ $2 =~ ^[0-9]+\.[0-9]+\.[_.0-9a-z]+$ ]]; then
+if [[ $2 =~ ^[0-9]+\.[0-9]+$ ]]; then
 	VERSION=$2
 else
 	echo "Wrong version"
 fi
 
-PRJ_ROOT="usr/share/$PROJECT-$VERSION"
+PRJ_ROOT="usr/share/${PROJECT}-${VERSION}"
 
 mkdir PRJ_ROOT
 
