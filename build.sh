@@ -9,7 +9,7 @@ fi
 
 PRJ_ROOT="usr/share/${PROJECT}-${VERSION}"
 
-mkdir -p PRJ_ROOT
+mkdir -p $PRJ_ROOT
 
 rsync -av --progress ../.meta/ "$PWD"
 rsync -av --progress ../* $PRJ_ROOT --exclude=.git/ --exclude=.idea/ --exclude='*.pyc' --exclude='*.pyo' --exclude='__pycache__' --exclude=uploads/ --exclude=.meta/
