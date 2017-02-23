@@ -7,12 +7,12 @@ else
 	echo "Wrong version"
 fi
 
-PRJ_ROOT="usr/share/${PROJECT}-${VERSION}"
+PRJ_ROOT="main/usr/share/${PROJECT}-${VERSION}"
 
 mkdir -p $PRJ_ROOT
 
-rsync -av --progress ../.meta/ "$PWD"
-rsync -av --progress ../* $PRJ_ROOT --exclude=.git/ --exclude=.idea/ --exclude='*.pyc' --exclude='*.pyo' --exclude='__pycache__' --exclude=uploads/ --exclude=.meta/
+rsync -av --progress ../.meta/ "$PWD/main"
+rsync -av --progress ../* $PRJ_ROOT --exclude=.git/ --exclude=.idea/ --exclude='*.pyc' --exclude='*.pyo' --exclude='__pycache__' --exclude=uploads/ --exclude=.meta/ --exclude=deploy_tools
 
 fakeroot dpkg-deb --build "$PWD/main" /tmp
 
