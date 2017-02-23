@@ -1,8 +1,12 @@
 #!/bin/bash
 
 echo 'Set permissions'
+echo '__PKG_VERS__'
+PKG_VER=__PKG_VERS__
+echo "$PKG_VER"
+echo "------------"
 
-chown w3data:w3data -R /usr/share/letsgo-1.0-3
+chown w3data:w3data -R /usr/share/
 chown w3data:w3data -R /var/www/letsgo
 
 touch /var/log/uwsgi.log
