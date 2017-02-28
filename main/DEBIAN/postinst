@@ -4,6 +4,9 @@ echo 'Set permissions'
 echo '__PKG_VERS__'
 PKG_VER=__PKG_VERS__
 echo "$PKG_VER"
+echo "$1"
+echo "$2"
+echo "$3"
 echo "------------"
 
 chown w3data:w3data -R /usr/share/

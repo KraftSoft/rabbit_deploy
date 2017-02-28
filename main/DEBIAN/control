@@ -1,5 +1,5 @@
 Package: letsgo
-Version: 1.0-2
+Version: ${PRJ_VER}
 Maintainer: Ilia Kravtsov <kravcov2512@gmail.com>
 Architecture: all
 Section: web

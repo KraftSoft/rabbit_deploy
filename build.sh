@@ -14,5 +14,5 @@ mkdir -p $PRJ_ROOT
 rsync -av --progress ../.meta/ "$PWD/main"
 rsync -av --progress ../* $PRJ_ROOT --exclude=.git/ --exclude=.idea/ --exclude='*.pyc' --exclude='*.pyo' --exclude='__pycache__' --exclude=uploads/ --exclude=.meta/ --exclude=deploy_tools
 
-fakeroot dpkg-deb --build "$PWD/main" /tmp
+fakeroot dpkg-deb --build "$PWD/main" /tmp/${PROJECT}-${VERSION}.deb
 
