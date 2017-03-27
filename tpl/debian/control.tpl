@@ -1,5 +1,5 @@
-Package: letsgo
-Version: 1.0-2
+Package: {{ project_name }}
+Version: {{ project_version }}
 Maintainer: Ilia Kravtsov <kravcov2512@gmail.com>
 Architecture: all
 Section: web
