@@ -19,8 +19,7 @@ chown w3data:w3data /var/log/uwsgi-letsgo.log
 
 
 echo 'Start migrations'
-su w3data -c "python3.4 /usr/share/{{ project_name }}-{{ project_version }}/manage.py makemigrations"
-su w3data -c "python3.4 /usr/share/{{ project_name }}-{{ project_version }}/manage.py migrate"
+su w3data -c "python3.4 /var/www/letsgo/manage.py migrate"
 
 echo 'Restart services'
 service nginx restart

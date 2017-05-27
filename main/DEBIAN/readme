@@ -12,3 +12,7 @@ su w3data -c "export PATH=${PYTHONPATH}:${PATH}"
 После выкатки:
 1. Поменять симлинк на /var/www/letsgo на новый пакет
 $ sudo ln -sfnd /usr/share/letsgo-xxx/* /var/www/letsgo # поменять текущую версию
+
+
+При первой выкатке:
+psql postgres -c "CREATE USER w3data WITH PASSWORD '0';"psql postgres -c "CREATE DATABASE together_db;"psql postgres -c "GRANT ALL PRIVILEGES ON DATABASE together_db to w3data;"psql postgres -c "ALTER USER w3data SUPERUSER;"psql postgres -c "CREATE EXTENSION postgis;"
