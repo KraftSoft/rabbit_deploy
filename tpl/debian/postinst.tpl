@@ -12,11 +12,12 @@ ln -sfnd /usr/share/{{ project_name }}-{{ project_version }}/* /var/www/letsgo
 
 touch /var/log/uwsgi.log
 touch /var/log/uwsgi-letsgo.log
+touch /var/log/tornado-letsgo.log
 
 chown w3data:w3data /etc/uwsgi/letsgo.yaml
 chown w3data:w3data /var/log/uwsgi.log
 chown w3data:w3data /var/log/uwsgi-letsgo.log
-
+chown w3data:w3data /var/log/tornado-letsgo.log
 
 echo 'Start migrations'
 su w3data -c "python3.4 /var/www/letsgo/manage.py migrate"
