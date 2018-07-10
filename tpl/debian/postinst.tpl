@@ -19,9 +19,10 @@ chown w3data:w3data /var/log/uwsgi.log
 chown w3data:w3data /var/log/uwsgi-letsgo.log
 chown w3data:w3data /var/log/tornado-letsgo.log
 
-echo 'Start migrations'
-su w3data -c "python3.4 /var/www/letsgo/manage.py migrate"
+echo 'Start migrations new'
+su w3data -c "/var/www/letsgo/env/bin/python /var/www/letsgo/manage.py migrate"
 
 echo 'Restart services'
 service nginx restart
-su w3data -c "/usr/bin/uwsgi --yaml /etc/uwsgi/letsgo.yaml"
+su w3data -c "touch /etc/uwsgi/letsgo.yaml"
+echo 'uwsgi conf file was touched'
