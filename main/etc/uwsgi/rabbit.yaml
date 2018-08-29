@@ -1,9 +1,9 @@
 uwsgi:
-    socket: 127.0.0.1:8082
-    pythonpath: /var/www/letsgo
+    socket: 127.0.0.1:8083
+    pythonpath: /var/www/rabbit
     module: application.wsgi
-    env: DJANGO_SETTINGS_MODULE=application.settings.prod
-    venv: /var/www/letsgo/env
+    env: DJANGO_SETTINGS_MODULE=application.settings
+    venv: /var/www/rabbit/env
     daemonize: /var/log/uwsgi.log
     max-requests: 5000
     plugins: python34
@@ -12,4 +12,4 @@ uwsgi:
     reload-mercy: 8
     master: 1
     no-orphans: 1
-    touch-reload: /etc/uwsgi/letsgo.yaml
+    touch-reload: /etc/uwsgi/rabbit.yaml

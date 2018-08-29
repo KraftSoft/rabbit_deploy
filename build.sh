@@ -11,7 +11,6 @@ mkdir -p $PRJ_ROOT
 
 pip install -r requirements.txt
 python ../manage.py migrate
-python ../manage.py test core chat
 
 if [ $? -eq 0 ]; then
     echo "OK"

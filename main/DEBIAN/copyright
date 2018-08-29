@@ -3,12 +3,11 @@ Upstream-Name: dhmk
 Source: <url://example.com>
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: 2018 Kravtsov Ilia kravcov2512@gmail.com
 License: GPL-3.0+
 
 Files: debian/*
-Copyright: 2017 kic <kic@unknown>
+Copyright: 2018 kic kravcov2512@gmail.com>
 License: GPL-3.0+
 
 License: GPL-3.0+
