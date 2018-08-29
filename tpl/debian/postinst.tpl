@@ -18,7 +18,7 @@ chown w3data:w3data /var/log/uwsgi.log
 chown w3data:w3data /var/log/uwsgi-rabbit.log
 
 echo 'Start migrations new'
-su w3data -c "/var/www/rabbit/env/bin/python /var/www/letsgo/manage.py migrate"
+su w3data -c "/var/www/rabbit/env/bin/python /var/www/rabbit/manage.py migrate"
 
 echo 'Restart services'
 service nginx restart
